@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainMap from "@/views/mainMap.vue"
-import {baseUrl} from '@/js/config.js'
+import {baseUrl} from '@/js/consts'
 
 const routes = [
   {

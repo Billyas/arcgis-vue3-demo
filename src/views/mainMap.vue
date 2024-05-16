@@ -10,7 +10,7 @@ import Map from '@arcgis/core/Map'
 import MapView from '@arcgis/core/views/MapView'
 import Graphic from '@arcgis/core/Graphic'
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer'
-import {baseUrl} from '@/js/config.js'
+import {baseUrl} from '@/js/consts'
 export default {
   name: 'MapView',
   props: {
