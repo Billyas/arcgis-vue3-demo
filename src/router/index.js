@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainMap from "@/views/mainMap.vue"
+import {baseUrl} from '@/js/config.js'
 
 const routes = [
   {
@@ -10,7 +11,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(baseUrl),
   routes
 })
 

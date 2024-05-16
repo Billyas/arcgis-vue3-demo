@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: import.meta.env.VITE_BaseUrl,
   plugins: [
     vue(),
   ],
@@ -12,9 +13,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  define: {
-    //添加env
-    'process.env': process.env
   }
 })

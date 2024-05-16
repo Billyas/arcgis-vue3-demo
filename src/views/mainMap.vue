@@ -10,6 +10,7 @@ import Map from '@arcgis/core/Map'
 import MapView from '@arcgis/core/views/MapView'
 import Graphic from '@arcgis/core/Graphic'
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer'
+import {baseUrl} from '@/js/config.js'
 export default {
   name: 'MapView',
   props: {
@@ -35,7 +36,7 @@ export default {
 
 
       //vue3加载geojson数据public/geojson/pt.json,在MapView渲染上加载geojson数据 type是"MultiPolygon"
-      fetch('/geojson/pt.json')
+      fetch(baseUrl+'/geojson/pt.json')
         .then(response => response.json())
         .then(data => {
           console.log(data)
