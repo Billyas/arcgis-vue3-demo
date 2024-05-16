@@ -41,20 +41,16 @@ export default {
           console.log(data)
           // debugger
           let graphics = data.features.map((feature) => {
-            //MultiPolygon 多个多边形绘制 Polygon 单个多边形绘制
+            //Polygon 单个多边形绘制
             let geometry = {
               type: 'polygon',
               rings: feature.geometry.coordinates[0]
             }
-            //返回graphics对象
             return new Graphic({
               geometry: geometry,
               attributes: feature.properties
             })
           })
-          // view.graphics.addMany(graphics)
-          // graphics 放到featurelayer中，然后添加标签
-          // 用 new featureLayer() 创建一个featureLayer对象
                       
           let featureLayer = new FeatureLayer({
             fields: [
